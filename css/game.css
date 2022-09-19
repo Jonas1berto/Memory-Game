@@ -71,6 +71,20 @@ button {
   opacity: 0;
 }
 
+.endGame {
+  width: 350px;
+  position: fixed;
+  text-align: center;
+}
+
+.messageEndGame {
+  color: rgb(10, 10, 10);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  border-top: solid 12px #000;
+}
+
 .btn-reset {
   padding: 10px;
   position: fixed;

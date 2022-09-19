@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid')
 const spanPlayer = document.querySelector('.player')
 const timer = document.querySelector('.timer')
+
+const message = document.getElementById('messageEndGame')
 const reset = document.getElementById('btn-reset')
 
 const characters = [
@@ -30,7 +32,9 @@ const checkEndGame = () => {
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop)
-    alert(`Parabéns ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`)
+
+    message.classList.add('messageEndGame')
+    message.innerHTML = `Parabéns ${spanPlayer.innerHTML}!, Seu tempo foi: ${timer.innerHTML}`
 
     reset.classList.add('btn-reset')
     document.querySelector('#btn-reset').removeAttribute('disabled')
